@@ -19,6 +19,18 @@ This package holds custom configurations for SLAM (Simultaneous Localization and
 
 - **`my_nav2_params.yaml`**: Configuration parameters for the Navigation 2 stack (costmaps, controllers, planners, etc.).
 
+### Shortcut Scripts (`Shortcut/`)
+
+These shell scripts provide convenient shortcuts for common tasks:
+
+- **`lidar3d_bringup.sh`**: Launches the 3D LiDAR driver (`velodyne-all-nodes-VLP16-launch.py`).
+- **`mapping.sh`**: Helper script to launch SLAM for mapping (`start_slam.launch.py`).
+- **`navigation.sh`**: Helper script to launch Navigation 2 (`start_nav.launch.py`).
+- **`slam_nav.sh`**: Helper script to launch combined SLAM and Navigation (`start_nav_slam.launch.py`).
+- **`save_map.sh`**: Saves the current map using Nav2's `map_saver_cli`. Auto-increments map numbering (`map_001`, `map_002`, etc.) and updates a `latest_map` symlink.
+- **`save_slamtb_map.sh`**: Saves the SLAM Toolbox serialized map (posegraph and data). Also auto-increments map numbering and updates symlinks.
+- **`reset_ros.sh`**: Kills all ROS 2 and CycloneDDS processes and restarts the ROS 2 daemon. Useful for a clean reset.
+
 ## Setup & Usage
 
 1. **Build the workspace:**
